@@ -55,10 +55,10 @@ public interface GameStatsCalculator {
 
 
   /**
-   * Returns a list of the scores aa person has gotten, sorted in ascending order (lowest to highest).
+   * Returns a list of the scores a person has gotten, sorted in ascending order (lowest to highest).
    * 
    * @param person the name of the person to query
-   * @return a list of the scores the person recieved in ascending order
+   * @return a list of the scores the person received in ascending order
    * @throws NoSuchElementException if the person does not exist in the score data
    */
   public List<Integer> sortedScores(String person);
