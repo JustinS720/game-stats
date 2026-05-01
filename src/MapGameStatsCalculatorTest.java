@@ -252,6 +252,25 @@ public class MapGameStatsCalculatorTest {
   }
 
   @Test
+  public void getAverageScoreReturnsAverageScoreForPersonTwo() {
+    // Arrange
+    String scoreData = "Nupur 10\n"
+        + "Baya 30\n"
+        + "Xinting 25\n"
+        + "Baya 50\n"
+        + "Nupur 10\n"
+        + "Baya 60\n"
+        + "Nupur 10\n";
+    GameStatsCalculator calculator = new MapGameStatsCalculator(new Scanner(scoreData));
+
+    // Act
+    double actual = calculator.getAverageScore("Nupur");
+
+    // Assert
+    assertEquals(10, actual, 0.001);
+  }
+
+  @Test
   public void getAverageScoreThrowsNullPointerExceptionForNullPerson() {
     // Arrange
     String scoreData = "Nupur 10\n"

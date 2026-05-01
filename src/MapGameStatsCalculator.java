@@ -168,7 +168,7 @@ public class MapGameStatsCalculator implements GameStatsCalculator {
     for (String person : gameCounts.keySet()) {
       int tempAvg = highScore(person);
       
-        if (tempAvg > highestAvg) {
+        if (highestName == "" || tempAvg > highestAvg) {
           highestName = person;
           highestAvg = tempAvg;
         }
