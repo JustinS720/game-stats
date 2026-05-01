@@ -101,14 +101,14 @@ public class MapGameStatsCalculator implements GameStatsCalculator {
     //throw new UnsupportedOperationException("Unimplemented method 'highestScorer'");
     checkScoreData();
     
-    String highestName = null;
-    int highestScore = 0;
+    String highestName = "";
+    int highestScore = Integer.MIN_VALUE;
 
     for (String person : gameCounts.keySet()) {
       int tempScore = highScore(person);
       String tempName = person;
 
-        if (tempScore > highestScore) {
+        if (highestName == "" || tempScore > highestScore) {
           highestName = person;
           highestScore = tempScore;
         }
